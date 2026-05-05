@@ -1,0 +1,5419 @@
+{
+  "boss_crusher_attack1.png": {
+    "attack_sequence": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "cols": 4,
+    "eligible_for_walk": [
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 100,
+        "cell": 1,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 320,
+        "cell": 2,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 150,
+        "cell": 4,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 280,
+        "cell": 9,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 10,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 340,
+        "cell": 11,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 220,
+        "cell": 12,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 14,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 15,
+        "source_sheet": "boss_crusher_attack1"
+      }
+    ],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 3,
+      "range_tier": "close"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_crusher_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_crusher_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_crusher_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 1,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 3,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 4,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 5,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 6,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 7,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 8,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 9,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 40,
+        "cell": 10,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 11,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 12,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 13,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 150,
+        "cell": 14,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_crusher_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_crusher_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 180,
+        "cell": 0,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 1,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 2,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 170,
+        "cell": 3,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 4,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 5,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 6,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 7,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 80,
+        "cell": 8,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 9,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 10,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 130,
+        "cell": 11,
+        "source_sheet": "boss_crusher_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 1,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 3,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 4,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 5,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 6,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 7,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 8,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 9,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 40,
+        "cell": 10,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 11,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 12,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 13,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 150,
+        "cell": 14,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_crusher_idle"
+      },
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 100,
+        "cell": 1,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 320,
+        "cell": 2,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 150,
+        "cell": 4,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 280,
+        "cell": 9,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 10,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 340,
+        "cell": 11,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 220,
+        "cell": 12,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 14,
+        "source_sheet": "boss_crusher_attack1"
+      },
+      {
+        "angle": 0,
+        "cell": 15,
+        "source_sheet": "boss_crusher_attack1"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_forgemaster_attack1.png": {
+    "attack_sequence": [
+      1,
+      9,
+      12,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 230,
+        "cell": 2,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 140,
+        "cell": 3,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 70,
+        "cell": 4,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 90,
+        "cell": 5,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 20,
+        "cell": 7,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 270,
+        "cell": 8,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 310,
+        "cell": 11,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 290,
+        "cell": 14,
+        "source_sheet": "boss_forgemaster_attack1"
+      }
+    ],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 3,
+      "range_tier": "close"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_forgemaster_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_forgemaster_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_forgemaster_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 1,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 2,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 3,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 4,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 5,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 6,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 7,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 8,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 9,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 10,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 11,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 13,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 15,
+        "source_sheet": "boss_forgemaster_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_forgemaster_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 2,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 280,
+        "cell": 4,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 6,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 7,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 5,
+        "cell": 10,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 11,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 13,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 15,
+        "source_sheet": "boss_forgemaster_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 1,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 2,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 3,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 4,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 5,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 6,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 7,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 8,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 9,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 10,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 11,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 13,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 15,
+        "source_sheet": "boss_forgemaster_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 230,
+        "cell": 2,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 140,
+        "cell": 3,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 70,
+        "cell": 4,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 90,
+        "cell": 5,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 20,
+        "cell": 7,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 270,
+        "cell": 8,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 310,
+        "cell": 11,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "boss_forgemaster_attack1"
+      },
+      {
+        "angle": 290,
+        "cell": 14,
+        "source_sheet": "boss_forgemaster_attack1"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_frost_core_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_frost_core_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_frost_core_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_frost_core_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 230,
+        "cell": 0,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 2,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 3,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 310,
+        "cell": 4,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 340,
+        "cell": 5,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 6,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 7,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 8,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 9,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 10,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 11,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 12,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 15,
+        "source_sheet": "boss_frost_core_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_frost_core_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 1,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 2,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 330,
+        "cell": 3,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 100,
+        "cell": 4,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 80,
+        "cell": 5,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 6,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 330,
+        "cell": 8,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 70,
+        "cell": 9,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 10,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 11,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 12,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 13,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 190,
+        "cell": 15,
+        "source_sheet": "boss_frost_core_walk"
+      },
+      {
+        "angle": 230,
+        "cell": 0,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 2,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 3,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 310,
+        "cell": 4,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 340,
+        "cell": 5,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 6,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 7,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 8,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 9,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 10,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 11,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 12,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_frost_core_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 15,
+        "source_sheet": "boss_frost_core_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_jungle_beast_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_jungle_beast_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_jungle_beast_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_jungle_beast_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 1,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 4,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 6,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 110,
+        "cell": 7,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 8,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 9,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 10,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 11,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 12,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 13,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_jungle_beast_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_jungle_beast_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 1,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 2,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 120,
+        "cell": 3,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 50,
+        "cell": 4,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 5,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 120,
+        "cell": 6,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 7,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 20,
+        "cell": 8,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 9,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 10,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 11,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 12,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 20,
+        "cell": 13,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 350,
+        "cell": 15,
+        "source_sheet": "boss_jungle_beast_walk"
+      },
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 1,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 4,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 6,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 110,
+        "cell": 7,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 8,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 9,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 10,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 11,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 12,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 13,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_jungle_beast_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_jungle_beast_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_magma_core_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_magma_core_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_magma_core_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_magma_core_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 2,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 3,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 4,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 5,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 9,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 12,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 13,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 14,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 15,
+        "source_sheet": "boss_magma_core_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_magma_core_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 1,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 230,
+        "cell": 2,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 3,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 4,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 280,
+        "cell": 5,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 6,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 330,
+        "cell": 7,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 8,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 40,
+        "cell": 9,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 70,
+        "cell": 10,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 130,
+        "cell": 12,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 200,
+        "cell": 14,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 15,
+        "source_sheet": "boss_magma_core_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 2,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 3,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 4,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 5,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 9,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 12,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 13,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 14,
+        "source_sheet": "boss_magma_core_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 15,
+        "source_sheet": "boss_magma_core_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_prism_lord_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "short"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_prism_lord_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "long"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_prism_lord_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_prism_lord_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 2,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 3,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 4,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 5,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 9,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 10,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 11,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 12,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 13,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 200,
+        "cell": 15,
+        "source_sheet": "boss_prism_lord_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_prism_lord_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 1,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 2,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 230,
+        "cell": 3,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 4,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 5,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 6,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 8,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 100,
+        "cell": 12,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 200,
+        "cell": 15,
+        "source_sheet": "boss_prism_lord_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 2,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 3,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 4,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 5,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 9,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 10,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 11,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 12,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 13,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_prism_lord_idle"
+      },
+      {
+        "angle": 200,
+        "cell": 15,
+        "source_sheet": "boss_prism_lord_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_rock_golem_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "short"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_rock_golem_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "short"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_rock_golem_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_rock_golem_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 180,
+        "cell": 0,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 1,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 2,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 3,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 4,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 5,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 50,
+        "cell": 6,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 7,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 8,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 310,
+        "cell": 9,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 10,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 11,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 12,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 13,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 14,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_rock_golem_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_rock_golem_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 190,
+        "cell": 0,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 1,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 100,
+        "cell": 2,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 3,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 80,
+        "cell": 4,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 5,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 6,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 350,
+        "cell": 7,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 310,
+        "cell": 8,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 9,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 10,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 11,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 12,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 13,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 14,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 190,
+        "cell": 15,
+        "source_sheet": "boss_rock_golem_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 0,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 1,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 2,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 3,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 4,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 5,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 50,
+        "cell": 6,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 20,
+        "cell": 7,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 8,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 310,
+        "cell": 9,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 10,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 11,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 12,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 13,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 14,
+        "source_sheet": "boss_rock_golem_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_rock_golem_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_titan_attack1.png": {
+    "attack_sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_attack1"
+      }
+    ],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "long"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_titan_attack2.png": {
+    "attack_sequence": [
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "cols": 4,
+    "eligible_for_walk": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 90,
+        "cell": 1,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 340,
+        "cell": 2,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 200,
+        "cell": 3,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 50,
+        "cell": 6,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 270,
+        "cell": 7,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 170,
+        "cell": 8,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 40,
+        "cell": 15,
+        "source_sheet": "boss_titan_attack2"
+      }
+    ],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 2,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_titan_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_titan_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 4,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 6,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 7,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 10,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 12,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 130,
+        "cell": 13,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_titan_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_titan_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 160,
+        "cell": 1,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 150,
+        "cell": 2,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 30,
+        "cell": 4,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 5,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 180,
+        "cell": 6,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 7,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 110,
+        "cell": 8,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 150,
+        "cell": 9,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 290,
+        "cell": 10,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 320,
+        "cell": 11,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 12,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 190,
+        "cell": 13,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 20,
+        "cell": 14,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 15,
+        "source_sheet": "boss_titan_walk"
+      },
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 280,
+        "cell": 4,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 6,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 7,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 10,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 12,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 130,
+        "cell": 13,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 15,
+        "source_sheet": "boss_titan_idle"
+      },
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_attack1"
+      },
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 90,
+        "cell": 1,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 340,
+        "cell": 2,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 200,
+        "cell": 3,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 50,
+        "cell": 6,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 270,
+        "cell": 7,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 170,
+        "cell": 8,
+        "source_sheet": "boss_titan_attack2"
+      },
+      {
+        "angle": 40,
+        "cell": 15,
+        "source_sheet": "boss_titan_attack2"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_virus_exe_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "short"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_virus_exe_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_virus_exe_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_virus_exe_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 1,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 2,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 3,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 4,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 230,
+        "cell": 5,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 6,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 7,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 8,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 10,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 190,
+        "cell": 11,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 12,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 13,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 230,
+        "cell": 15,
+        "source_sheet": "boss_virus_exe_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_virus_exe_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 230,
+        "cell": 0,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 230,
+        "cell": 1,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 230,
+        "cell": 2,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 170,
+        "cell": 3,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 120,
+        "cell": 4,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 110,
+        "cell": 5,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 6,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 7,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 350,
+        "cell": 8,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 9,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 10,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 11,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 200,
+        "cell": 13,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 15,
+        "source_sheet": "boss_virus_exe_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 0,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 1,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 180,
+        "cell": 2,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 3,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 4,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 230,
+        "cell": 5,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 6,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 7,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 8,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 10,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 190,
+        "cell": 11,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 12,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 13,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 220,
+        "cell": 14,
+        "source_sheet": "boss_virus_exe_idle"
+      },
+      {
+        "angle": 230,
+        "cell": 15,
+        "source_sheet": "boss_virus_exe_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "boss_volt_engine_attack1.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "medium"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_volt_engine_attack2.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "eligible_for_walk": [],
+    "kind": "attack_sequence",
+    "meta": {
+      "hits_all_sides": true,
+      "loop_count": 1,
+      "range_tier": "long"
+    },
+    "rows": 4,
+    "state": "attack"
+  },
+  "boss_volt_engine_death.png": {
+    "attack_sequence": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cols": 4,
+    "kind": "death_sequence",
+    "meta": {
+      "loop_count": 1,
+      "no_rotation": true
+    },
+    "rows": 4,
+    "state": "death"
+  },
+  "boss_volt_engine_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 2,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 3,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 4,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 5,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 50,
+        "cell": 9,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 12,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 13,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 15,
+        "source_sheet": "boss_volt_engine_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "boss_volt_engine_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 200,
+        "cell": 0,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 4,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 290,
+        "cell": 5,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 330,
+        "cell": 6,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 7,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 8,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 20,
+        "cell": 9,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 40,
+        "cell": 10,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 12,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 110,
+        "cell": 13,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 130,
+        "cell": 14,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 190,
+        "cell": 15,
+        "source_sheet": "boss_volt_engine_walk"
+      },
+      {
+        "angle": 220,
+        "cell": 0,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 260,
+        "cell": 2,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 3,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 320,
+        "cell": 4,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 330,
+        "cell": 5,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 6,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 7,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 8,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 50,
+        "cell": 9,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 10,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 12,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 140,
+        "cell": 13,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "boss_volt_engine_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 15,
+        "source_sheet": "boss_volt_engine_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "chassis_heavy_attack.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 280,
+        "cell": 2,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 3,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 4,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 5,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 175,
+        "cell": 6,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 270,
+        "cell": 7,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 9,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 10,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 355,
+        "cell": 11,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 260,
+        "cell": 12,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 14,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 185,
+        "cell": 15,
+        "source_sheet": "chassis_heavy_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "attack"
+  },
+  "chassis_heavy_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 265,
+        "cell": 2,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 275,
+        "cell": 3,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 285,
+        "cell": 4,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 7,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 5,
+        "cell": 8,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 95,
+        "cell": 12,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 13,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 14,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 15,
+        "source_sheet": "chassis_heavy_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "chassis_heavy_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 265,
+        "cell": 2,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 275,
+        "cell": 3,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 285,
+        "cell": 4,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 350,
+        "cell": 7,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 5,
+        "cell": 8,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 95,
+        "cell": 12,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 135,
+        "cell": 13,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 170,
+        "cell": 14,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 185,
+        "cell": 15,
+        "source_sheet": "chassis_heavy_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 265,
+        "cell": 2,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 275,
+        "cell": 3,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 285,
+        "cell": 4,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 300,
+        "cell": 5,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 350,
+        "cell": 7,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 5,
+        "cell": 8,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 30,
+        "cell": 9,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 90,
+        "cell": 11,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 95,
+        "cell": 12,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 13,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 14,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 15,
+        "source_sheet": "chassis_heavy_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 1,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 280,
+        "cell": 2,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 3,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 4,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 5,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 175,
+        "cell": 6,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 270,
+        "cell": 7,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 9,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 10,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 355,
+        "cell": 11,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 260,
+        "cell": 12,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 14,
+        "source_sheet": "chassis_heavy_attack"
+      },
+      {
+        "angle": 185,
+        "cell": 15,
+        "source_sheet": "chassis_heavy_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "chassis_light_attack.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 275,
+        "cell": 1,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 2,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 3,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 90,
+        "cell": 4,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 5,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 6,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 8,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 95,
+        "cell": 9,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 175,
+        "cell": 10,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 290,
+        "cell": 11,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 10,
+        "cell": 12,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 90,
+        "cell": 13,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 200,
+        "cell": 15,
+        "source_sheet": "chassis_light_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "attack"
+  },
+  "chassis_light_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 275,
+        "cell": 4,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 285,
+        "cell": 5,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 45,
+        "cell": 9,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 65,
+        "cell": 10,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 95,
+        "cell": 11,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 12,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 165,
+        "cell": 13,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 14,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 15,
+        "source_sheet": "chassis_light_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "chassis_light_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 275,
+        "cell": 4,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 285,
+        "cell": 5,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 45,
+        "cell": 9,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 65,
+        "cell": 10,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 95,
+        "cell": 11,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 135,
+        "cell": 12,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 165,
+        "cell": 13,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 185,
+        "cell": 14,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 210,
+        "cell": 15,
+        "source_sheet": "chassis_light_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 1,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 3,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 275,
+        "cell": 4,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 285,
+        "cell": 5,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 6,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 10,
+        "cell": 8,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 45,
+        "cell": 9,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 65,
+        "cell": 10,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 95,
+        "cell": 11,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 12,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 165,
+        "cell": 13,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 14,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 210,
+        "cell": 15,
+        "source_sheet": "chassis_light_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 275,
+        "cell": 1,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 2,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 3,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 90,
+        "cell": 4,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 5,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 6,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 340,
+        "cell": 7,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 8,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 95,
+        "cell": 9,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 175,
+        "cell": 10,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 290,
+        "cell": 11,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 10,
+        "cell": 12,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 90,
+        "cell": 13,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "chassis_light_attack"
+      },
+      {
+        "angle": 200,
+        "cell": 15,
+        "source_sheet": "chassis_light_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "chassis_medium_attack.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 135,
+        "cell": 0,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 1,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 3,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 225,
+        "cell": 4,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 180,
+        "cell": 5,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 225,
+        "cell": 6,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 235,
+        "cell": 7,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 8,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 9,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 260,
+        "cell": 10,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 11,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 12,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 210,
+        "cell": 13,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 270,
+        "cell": 14,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 15,
+        "source_sheet": "chassis_medium_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "attack"
+  },
+  "chassis_medium_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 135,
+        "cell": 0,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 1,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 200,
+        "cell": 2,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 3,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 4,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 5,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 6,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 7,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 355,
+        "cell": 8,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 25,
+        "cell": 9,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 45,
+        "cell": 11,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 65,
+        "cell": 12,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 14,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 130,
+        "cell": 15,
+        "source_sheet": "chassis_medium_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "chassis_medium_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 135,
+        "cell": 0,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 170,
+        "cell": 1,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 200,
+        "cell": 2,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 3,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 4,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 5,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 290,
+        "cell": 6,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 315,
+        "cell": 7,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 355,
+        "cell": 8,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 25,
+        "cell": 9,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 45,
+        "cell": 11,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 65,
+        "cell": 12,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 100,
+        "cell": 14,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 130,
+        "cell": 15,
+        "source_sheet": "chassis_medium_walk"
+      },
+      {
+        "angle": 135,
+        "cell": 0,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 1,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 200,
+        "cell": 2,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 3,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 4,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 5,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 290,
+        "cell": 6,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 7,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 355,
+        "cell": 8,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 25,
+        "cell": 9,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 60,
+        "cell": 10,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 45,
+        "cell": 11,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 65,
+        "cell": 12,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 80,
+        "cell": 13,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 100,
+        "cell": 14,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 130,
+        "cell": 15,
+        "source_sheet": "chassis_medium_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 0,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 1,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 2,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 3,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 225,
+        "cell": 4,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 180,
+        "cell": 5,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 225,
+        "cell": 6,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 235,
+        "cell": 7,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 250,
+        "cell": 8,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 9,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 260,
+        "cell": 10,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 11,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 12,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 210,
+        "cell": 13,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 270,
+        "cell": 14,
+        "source_sheet": "chassis_medium_attack"
+      },
+      {
+        "angle": 135,
+        "cell": 15,
+        "source_sheet": "chassis_medium_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  },
+  "chassis_titan_attack.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 190,
+        "cell": 1,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 2,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 3,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 4,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 155,
+        "cell": 5,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 6,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 220,
+        "cell": 7,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 8,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 300,
+        "cell": 9,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 10,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 11,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 12,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 110,
+        "cell": 13,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 190,
+        "cell": 15,
+        "source_sheet": "chassis_titan_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "attack"
+  },
+  "chassis_titan_idle.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 1,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 105,
+        "cell": 2,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 3,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 4,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 155,
+        "cell": 5,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 6,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 7,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 105,
+        "cell": 8,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 9,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 10,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 11,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 13,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 15,
+        "source_sheet": "chassis_titan_idle"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "idle"
+  },
+  "chassis_titan_walk.png": {
+    "cols": 4,
+    "eligible_cells": [
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 1,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 105,
+        "cell": 2,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 185,
+        "cell": 3,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 170,
+        "cell": 4,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 155,
+        "cell": 5,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 135,
+        "cell": 6,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 120,
+        "cell": 7,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 105,
+        "cell": 8,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 70,
+        "cell": 9,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 0,
+        "cell": 10,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 315,
+        "cell": 11,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 250,
+        "cell": 13,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 15,
+        "source_sheet": "chassis_titan_walk"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 1,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 105,
+        "cell": 2,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 185,
+        "cell": 3,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 170,
+        "cell": 4,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 155,
+        "cell": 5,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 135,
+        "cell": 6,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 120,
+        "cell": 7,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 105,
+        "cell": 8,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 70,
+        "cell": 9,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 0,
+        "cell": 10,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 315,
+        "cell": 11,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 270,
+        "cell": 12,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 250,
+        "cell": 13,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 240,
+        "cell": 14,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 15,
+        "source_sheet": "chassis_titan_idle"
+      },
+      {
+        "angle": 225,
+        "cell": 0,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 190,
+        "cell": 1,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 2,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 3,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 4,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 155,
+        "cell": 5,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 170,
+        "cell": 6,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 220,
+        "cell": 7,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 265,
+        "cell": 8,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 300,
+        "cell": 9,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 350,
+        "cell": 10,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 45,
+        "cell": 11,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 80,
+        "cell": 12,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 110,
+        "cell": 13,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 160,
+        "cell": 14,
+        "source_sheet": "chassis_titan_attack"
+      },
+      {
+        "angle": 190,
+        "cell": 15,
+        "source_sheet": "chassis_titan_attack"
+      }
+    ],
+    "kind": "directional_anim",
+    "rows": 4,
+    "state": "walk"
+  }
+}
