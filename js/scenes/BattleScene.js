@@ -383,20 +383,19 @@ export default class BattleScene extends Phaser.Scene {
         const isMoving = Math.abs(p.moveDir.x) > 0.1 || Math.abs(p.moveDir.y) > 0.1;
         const dodgeTriggered = Phaser.Input.Keyboard.JustDown(this.keys.dodge) || this.touchDodgePressed;
         this.touchDodgePressed = false;
-        if (dodgeTriggered && isMoving) {
-            const dodged = p.startDodge(p.moveDir.x, p.moveDir.y);
+        if (dodgeTriggered) {
+            const dodgeX = isMoving ? p.moveDir.x : Math.cos(p.angle || 0);
+            const dodgeY = isMoving ? p.moveDir.y : Math.sin(p.angle || 0);
+            const dodged = p.startDodge(dodgeX, dodgeY);
             if (dodged) {
                 this.particles.sparks(p.x, p.y, COLORS.WHITE, 6);
                 if (this.audio) this.audio.playSwing();
             }
-        } else if (this.keys.dodge.isDown && !isMoving) {
+        } else if ((this.keys.dodge.isDown && !isMoving) || this.touchBlockHeld) {
             p.blocking = true;
         } else if (!this.keys.dodge.isDown) {
-            // Don't override touch block button
-            if (!this.sys.game.device.input.touch) p.blocking = false;
+            p.blocking = false;
         }
-
-        this.touchBombPressed = false;
 
         // Weapon swap (Q key or touch)
         const swapTriggered = Phaser.Input.Keyboard.JustDown(this.keys.swap) || this.touchSwapPressed;
@@ -2571,7 +2570,7 @@ export default class BattleScene extends Phaser.Scene {
         this.touchJoystick = { active: false, dx: 0, dy: 0, baseX: 100, baseY: GAME_HEIGHT - 130 };
         this.touchAttackPressed = false;
         this.touchDodgePressed = false;
-        this.touchBombPressed = false;
+        this.touchBlockHeld = false;
         this.touchSwapPressed = false;
 
         if (this._createDomTouchControls()) return;
@@ -2623,20 +2622,22 @@ export default class BattleScene extends Phaser.Scene {
         // Dodge — above attack
         makeBtn(GAME_WIDTH - 150, GAME_HEIGHT - 160, 28, 'DODGE', 0x33ff88, () => { this.touchDodgePressed = true; });
 
-        // Active weapon helper — attack if bomb is active, otherwise mirrors attack
-        makeBtn(GAME_WIDTH - 160, GAME_HEIGHT - 100, 28, 'USE', 0xffaa33, () => { this.touchAttackPressed = true; });
-
         // Swap — small, below dodge
         makeBtn(GAME_WIDTH - 90, GAME_HEIGHT - 50, 22, 'SWAP', 0x8888ff, () => { this.touchSwapPressed = true; });
+
+        makeBtn(48, 82, 24, 'PAUSE', 0xffffff, () => {
+            if (!this.isMultiplayer && (this.battleActive || this.paused)) this._togglePause();
+        });
 
         // Block — hold zone (bottom-left, near joystick)
         const blockZone = this.add.circle(200, GAME_HEIGHT - 60, 25, 0x000000, 0.25)
             .setDepth(D).setStrokeStyle(2, 0x3388ff, 0.5).setInteractive();
         this.add.text(200, GAME_HEIGHT - 60, 'BLK', {
-            fontSize: '10px', fontFamily: 'monospace', color: '#ffaa33',
+            fontSize: '10px', fontFamily: 'monospace', color: '#8db9ff',
         }).setOrigin(0.5).setDepth(D + 1);
-        blockZone.on('pointerdown', () => { this.player.blocking = true; });
-        blockZone.on('pointerup', () => { this.player.blocking = false; });
+        blockZone.on('pointerdown', () => { this.touchBlockHeld = true; });
+        blockZone.on('pointerup', () => { this.touchBlockHeld = false; });
+        blockZone.on('pointercancel', () => { this.touchBlockHeld = false; });
     }
 
     _createDomTouchControls() {
@@ -2679,13 +2680,20 @@ export default class BattleScene extends Phaser.Scene {
             return btn;
         };
 
+        const pauseBtn = document.createElement('button');
+        pauseBtn.type = 'button';
+        pauseBtn.className = 'touch-action-btn touch-pause';
+        pauseBtn.textContent = 'PAUSE';
+        pauseBtn.addEventListener('pointerdown', (event) => {
+            event.preventDefault();
+            if (!this.isMultiplayer && (this.battleActive || this.paused)) this._togglePause();
+        }, { passive: false });
+        root.appendChild(pauseBtn);
+
         makeButton('DODGE', 'touch-dodge', () => { this.touchDodgePressed = true; });
         makeButton('ATK', 'touch-attack', () => { this.touchAttackPressed = true; });
-        makeButton('USE', 'touch-use', () => { this.touchAttackPressed = true; });
         makeButton('SWAP', 'touch-swap', () => { this.touchSwapPressed = true; });
-        makeButton('BLK', 'touch-block', () => { if (this.player) this.player.blocking = true; }, () => {
-            if (this.player) this.player.blocking = false;
-        });
+        makeButton('BLK', 'touch-block', () => { this.touchBlockHeld = true; }, () => { this.touchBlockHeld = false; });
 
         document.body.appendChild(root);
 
@@ -2772,6 +2780,7 @@ export default class BattleScene extends Phaser.Scene {
                 window.removeEventListener('orientationchange', layoutControls);
                 root.remove();
                 if (this.player) this.player.blocking = false;
+                this.touchBlockHeld = false;
                 resetJoystick();
             },
         };

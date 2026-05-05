@@ -123,16 +123,8 @@ body {
     border-color: rgba(255, 221, 102, 0.7);
 }
 
-.touch-use {
-    left: 6px;
-    top: 92px;
-    width: 58px;
-    height: 58px;
-    border-color: rgba(255, 170, 51, 0.72);
-}
-
 .touch-swap {
-    left: 90px;
+    left: 8px;
     top: 154px;
     width: 50px;
     height: 50px;
@@ -141,11 +133,22 @@ body {
 }
 
 .touch-block {
-    left: 28px;
+    left: 90px;
     top: 158px;
     width: 50px;
     height: 50px;
     border-color: rgba(80, 150, 255, 0.72);
-    color: #ffaa33;
+    color: #8db9ff;
     font-size: 9px;
+}
+
+.touch-pause {
+    position: fixed;
+    left: calc(env(safe-area-inset-left, 0px) + 12px);
+    top: calc(env(safe-area-inset-top, 0px) + 12px);
+    width: 54px;
+    height: 54px;
+    border-color: rgba(255, 255, 255, 0.62);
+    color: #ffffff;
+    font-size: 8px;
 }
