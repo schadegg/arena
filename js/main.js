@@ -19,6 +19,9 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
+    input: {
+        activePointers: 4,
+    },
     physics: {
         default: 'arcade',
         arcade: {
@@ -32,6 +35,51 @@ const game = new Phaser.Game(config);
 window.game = game;
 
 // Register shared systems in the registry
-game.registry.set('audio', new AudioManager());
+const audio = new AudioManager();
+game.registry.set('audio', audio);
 game.registry.set('progression', new ProgressionSystem());
 game.registry.set('difficulty', 'medium');
+
+const preventMobileBrowserGestures = () => {
+    const prevent = (event) => event.preventDefault();
+    document.addEventListener('gesturestart', prevent, { passive: false });
+    document.addEventListener('gesturechange', prevent, { passive: false });
+    document.addEventListener('gestureend', prevent, { passive: false });
+    document.addEventListener('touchmove', prevent, { passive: false });
+
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', (event) => {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 320) event.preventDefault();
+        lastTouchEnd = now;
+    }, { passive: false });
+};
+
+const installAudioUnlock = () => {
+    let unlocked = false;
+    const unlock = () => {
+        audio.init();
+        audio.resume();
+        const scene = game.scene.getScenes(true)[0];
+        if (!audio.currentMusic && scene?.scene?.key === 'MenuScene') {
+            audio.startMenuMusic();
+        } else if (audio.currentMusic && !audio.currentMusic.isPlaying) {
+            audio.currentMusic.play();
+            audio._syncManagedAudio();
+        }
+        unlocked = true;
+    };
+
+    const unlockOnce = () => unlock();
+    const events = ['pointerdown', 'touchstart', 'mousedown', 'keydown'];
+    events.forEach((eventName) => {
+        window.addEventListener(eventName, unlockOnce, { passive: false });
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && unlocked) unlock();
+    });
+};
+
+preventMobileBrowserGestures();
+installAudioUnlock();

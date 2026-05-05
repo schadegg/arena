@@ -2574,6 +2574,8 @@ export default class BattleScene extends Phaser.Scene {
         this.touchBombPressed = false;
         this.touchSwapPressed = false;
 
+        if (this._createDomTouchControls()) return;
+
         // ── Left: Virtual Joystick ──
         const jbx = 100, jby = GAME_HEIGHT - 130;
         this.add.circle(jbx, jby, 55, 0x000000, 0.3).setDepth(D).setStrokeStyle(3, 0x444444, 0.5);
@@ -2635,6 +2637,153 @@ export default class BattleScene extends Phaser.Scene {
         }).setOrigin(0.5).setDepth(D + 1);
         blockZone.on('pointerdown', () => { this.player.blocking = true; });
         blockZone.on('pointerup', () => { this.player.blocking = false; });
+    }
+
+    _createDomTouchControls() {
+        if (typeof document === 'undefined') return false;
+
+        this._destroyDomTouchControls();
+
+        const root = document.createElement('div');
+        root.id = 'battle-touch-controls';
+        root.setAttribute('aria-hidden', 'true');
+
+        const joystick = document.createElement('div');
+        joystick.className = 'touch-joystick';
+        const knob = document.createElement('div');
+        knob.className = 'touch-joystick-knob';
+        joystick.appendChild(knob);
+        root.appendChild(joystick);
+
+        const actions = document.createElement('div');
+        actions.className = 'touch-actions';
+        root.appendChild(actions);
+
+        const makeButton = (label, className, onDown, onUp = null) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = `touch-action-btn ${className}`;
+            btn.textContent = label;
+            const down = (event) => {
+                event.preventDefault();
+                onDown();
+            };
+            const up = (event) => {
+                event.preventDefault();
+                if (onUp) onUp();
+            };
+            btn.addEventListener('pointerdown', down, { passive: false });
+            btn.addEventListener('pointerup', up, { passive: false });
+            btn.addEventListener('pointercancel', up, { passive: false });
+            actions.appendChild(btn);
+            return btn;
+        };
+
+        makeButton('DODGE', 'touch-dodge', () => { this.touchDodgePressed = true; });
+        makeButton('ATK', 'touch-attack', () => { this.touchAttackPressed = true; });
+        makeButton('USE', 'touch-use', () => { this.touchAttackPressed = true; });
+        makeButton('SWAP', 'touch-swap', () => { this.touchSwapPressed = true; });
+        makeButton('BLK', 'touch-block', () => { if (this.player) this.player.blocking = true; }, () => {
+            if (this.player) this.player.blocking = false;
+        });
+
+        document.body.appendChild(root);
+
+        let joystickPointerId = null;
+        const updateJoystick = (event) => {
+            const rect = joystick.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const dx = event.clientX - centerX;
+            const dy = event.clientY - centerY;
+            const dist = Math.hypot(dx, dy);
+            const maxDist = 50;
+            const clamped = Math.min(dist, maxDist);
+            const angle = Math.atan2(dy, dx);
+            const knobX = Math.cos(angle) * clamped;
+            const knobY = Math.sin(angle) * clamped;
+
+            knob.style.transform = `translate(calc(-50% + ${knobX}px), calc(-50% + ${knobY}px))`;
+            this.touchJoystick.active = true;
+            this.touchJoystick.dx = maxDist > 0 ? knobX / maxDist : 0;
+            this.touchJoystick.dy = maxDist > 0 ? knobY / maxDist : 0;
+        };
+
+        const resetJoystick = () => {
+            joystickPointerId = null;
+            knob.style.transform = 'translate(-50%, -50%)';
+            this.touchJoystick.active = false;
+            this.touchJoystick.dx = 0;
+            this.touchJoystick.dy = 0;
+        };
+
+        joystick.addEventListener('pointerdown', (event) => {
+            event.preventDefault();
+            joystickPointerId = event.pointerId;
+            joystick.setPointerCapture(event.pointerId);
+            updateJoystick(event);
+        }, { passive: false });
+        joystick.addEventListener('pointermove', (event) => {
+            if (event.pointerId !== joystickPointerId) return;
+            event.preventDefault();
+            updateJoystick(event);
+        }, { passive: false });
+        joystick.addEventListener('pointerup', (event) => {
+            if (event.pointerId !== joystickPointerId) return;
+            event.preventDefault();
+            resetJoystick();
+        }, { passive: false });
+        joystick.addEventListener('pointercancel', (event) => {
+            if (event.pointerId !== joystickPointerId) return;
+            event.preventDefault();
+            resetJoystick();
+        }, { passive: false });
+
+        const layoutControls = () => {
+            const canvas = this.sys.game.canvas;
+            const rect = canvas.getBoundingClientRect();
+            const vw = window.innerWidth;
+            const leftGutter = Math.max(0, rect.left);
+            const rightGutter = Math.max(0, vw - rect.right);
+            const controlY = Math.round(rect.top + rect.height * 0.72);
+
+            const joystickX = leftGutter >= 132
+                ? Math.round(leftGutter / 2)
+                : Math.round(rect.left + 82);
+            const actionsX = rightGutter >= 156
+                ? Math.round(rect.right + rightGutter / 2)
+                : Math.round(rect.right - 88);
+
+            joystick.style.left = `${joystickX}px`;
+            joystick.style.top = `${controlY}px`;
+            actions.style.left = `${actionsX}px`;
+            actions.style.top = `${controlY}px`;
+        };
+
+        layoutControls();
+        window.addEventListener('resize', layoutControls);
+        window.addEventListener('orientationchange', layoutControls);
+
+        this.domTouchControls = {
+            root,
+            layoutControls,
+            cleanup: () => {
+                window.removeEventListener('resize', layoutControls);
+                window.removeEventListener('orientationchange', layoutControls);
+                root.remove();
+                if (this.player) this.player.blocking = false;
+                resetJoystick();
+            },
+        };
+        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this._destroyDomTouchControls());
+
+        return true;
+    }
+
+    _destroyDomTouchControls() {
+        if (!this.domTouchControls) return;
+        this.domTouchControls.cleanup();
+        this.domTouchControls = null;
     }
 
     // ── Wave Survival ──

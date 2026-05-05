@@ -2,6 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
 }
 
 body {
@@ -9,9 +20,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
+    position: fixed;
+    inset: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overscroll-behavior: none;
+    touch-action: none;
 }
 
 #game-container {
@@ -19,8 +37,115 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 40px rgba(255, 100, 0, 0.3), 0 0 80px rgba(255, 50, 0, 0.1);
+    max-width: 100vw;
+    max-height: 100dvh;
+    touch-action: none;
 }
 
 #game-container canvas {
     display: block;
+    max-width: 100vw;
+    max-height: 100dvh;
+    touch-action: none;
+}
+
+#battle-touch-controls {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.touch-joystick {
+    position: fixed;
+    width: 112px;
+    height: 112px;
+    border: 3px solid rgba(255, 170, 51, 0.48);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.34);
+    box-shadow: 0 0 18px rgba(255, 100, 0, 0.22), inset 0 0 18px rgba(255, 255, 255, 0.08);
+    pointer-events: auto;
+    touch-action: none;
+    transform: translate(-50%, -50%);
+}
+
+.touch-joystick-knob {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(255, 255, 255, 0.42);
+    border-radius: 50%;
+    background: rgba(170, 170, 170, 0.58);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.42);
+    transform: translate(-50%, -50%);
+}
+
+.touch-actions {
+    position: fixed;
+    width: 146px;
+    height: 188px;
+    pointer-events: none;
+    touch-action: none;
+    transform: translate(-50%, -50%);
+}
+
+.touch-action-btn {
+    position: absolute;
+    border: 3px solid rgba(255, 255, 255, 0.34);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.42);
+    color: #ffffff;
+    font: 700 10px monospace;
+    text-align: center;
+    text-shadow: 0 2px 0 #000000;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.45), inset 0 0 12px rgba(255, 255, 255, 0.08);
+    pointer-events: auto;
+    touch-action: none;
+}
+
+.touch-attack {
+    left: 78px;
+    top: 68px;
+    width: 78px;
+    height: 78px;
+    border-color: rgba(255, 68, 68, 0.72);
+    font-size: 13px;
+}
+
+.touch-dodge {
+    left: 10px;
+    top: 18px;
+    width: 58px;
+    height: 58px;
+    border-color: rgba(255, 221, 102, 0.7);
+}
+
+.touch-use {
+    left: 6px;
+    top: 92px;
+    width: 58px;
+    height: 58px;
+    border-color: rgba(255, 170, 51, 0.72);
+}
+
+.touch-swap {
+    left: 90px;
+    top: 154px;
+    width: 50px;
+    height: 50px;
+    border-color: rgba(153, 153, 153, 0.7);
+    font-size: 9px;
+}
+
+.touch-block {
+    left: 28px;
+    top: 158px;
+    width: 50px;
+    height: 50px;
+    border-color: rgba(80, 150, 255, 0.72);
+    color: #ffaa33;
+    font-size: 9px;
 }
