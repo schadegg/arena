@@ -100,9 +100,11 @@ export default class ProgressionSystem {
     setSkin(skin) { this.data.skin = skin; this.save(); }
     setWeapon(weapon) {
         if (!WEAPONS[weapon] || !this.isWeaponUnlocked(weapon)) return false;
+        const previousPrimary = this.data.weapon;
+        if (weapon === previousPrimary) return true;
         this.data.weapon = weapon;
         if (this.data.secondaryWeapon === this.data.weapon) {
-            this.data.secondaryWeapon = null;
+            this.data.secondaryWeapon = previousPrimary !== weapon ? previousPrimary : null;
         }
         this.save();
         return true;
@@ -114,10 +116,10 @@ export default class ProgressionSystem {
             return true;
         }
         if (!WEAPONS[weapon] || !this.isWeaponUnlocked(weapon)) return false;
+        if (weapon === this.data.weapon) return false;
+        const previousSecondary = this.data.secondaryWeapon;
         this.data.secondaryWeapon = weapon;
-        if (this.data.secondaryWeapon === this.data.weapon) {
-            this.data.secondaryWeapon = null;
-        }
+        if (previousSecondary === this.data.weapon) this.data.weapon = previousSecondary;
         this.save();
         return true;
     }

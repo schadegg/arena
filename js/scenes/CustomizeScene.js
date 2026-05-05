@@ -388,13 +388,14 @@ export default class CustomizeScene extends Phaser.Scene {
                 stroke: '#000000',
                 strokeThickness: 2,
             }).setOrigin(0.5));
-            if (!isSecondary) {
-                this._contentBtn(actionX, cy + 18, actionW, 'SET ALT', '#88aaff', () => {
-                    this.prog.setSecondaryWeapon(key);
-                    this._renderTab();
-                    this._drawPreview();
-                });
-            }
+            this.contentContainer.add(this.add.text(actionX, cy + 18, 'SELECT ANOTHER\nWEAPON FOR ALT', {
+                fontSize: '9px',
+                fontFamily: 'monospace',
+                color: '#ffffff',
+                align: 'center',
+                stroke: '#000000',
+                strokeThickness: 2,
+            }).setOrigin(0.5));
         } else if (isSecondary) {
             this.contentContainer.add(this.add.text(actionX, cy - 20, 'ALT EQUIPPED', {
                 fontSize: '12px',
@@ -403,11 +404,14 @@ export default class CustomizeScene extends Phaser.Scene {
                 stroke: '#000000',
                 strokeThickness: 2,
             }).setOrigin(0.5));
-            this._contentBtn(actionX, cy + 18, actionW, 'SET PRIMARY', '#ffdd66', () => {
-                this.prog.setWeapon(key);
-                this._renderTab();
-                this._drawPreview();
-            });
+            this.contentContainer.add(this.add.text(actionX, cy + 18, 'SELECT ANOTHER\nWEAPON FOR PRIMARY', {
+                fontSize: '9px',
+                fontFamily: 'monospace',
+                color: '#ffffff',
+                align: 'center',
+                stroke: '#000000',
+                strokeThickness: 2,
+            }).setOrigin(0.5));
         } else if (unlocked) {
             this._contentBtn(actionX, cy - 18, actionW, 'SET PRIMARY', '#ffdd66', () => {
                 this.prog.setWeapon(key);

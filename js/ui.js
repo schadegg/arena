@@ -580,10 +580,10 @@ export function addButton(scene, x, y, w, h, text, callback, options = {}) {
         setButtonTextureForState(scene, normal, w, h, 'normal');
         label.setScale(1);
     });
-    let fired = false;
-    const fire = () => {
-        if (fired) return;
-        fired = true;
+    let activePointerId = null;
+    const fire = (pointer) => {
+        if (activePointerId !== null && pointer?.id === activePointerId) return;
+        activePointerId = pointer?.id ?? -1;
         const audio = scene.registry.get('audio');
         if (audio) {
             audio.init();
@@ -592,11 +592,14 @@ export function addButton(scene, x, y, w, h, text, callback, options = {}) {
         }
         scene.time.delayedCall(1, () => {
             callback();
-            fired = false;
+            activePointerId = null;
         });
     };
     normal.on('pointerdown', fire);
-    normal.on('pointerup', fire);
+    normal.on('pointerup', (pointer) => {
+        if (activePointerId !== null) return;
+        fire(pointer);
+    });
 
     normal._ownedParts = [normal, label];
     return normal;
