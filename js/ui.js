@@ -137,7 +137,7 @@ export const UI_THEME = Object.freeze({
     strokeThickness: 2,
     colors: Object.freeze({
         text: '#ffffff',
-        subtle: '#999999',
+        subtle: '#ffffff',
         accent: '#ffaa33',
         success: '#ffdd66',
         danger: '#ff4444',

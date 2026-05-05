@@ -284,7 +284,8 @@ export default class MenuScene extends Phaser.Scene {
                 fontSize: '13px', fontFamily: 'monospace', color: '#ffffff', stroke: '#000000', strokeThickness: 2,
             }).setDepth(102));
             this._trackOverlay(this.add.text(x + 120, y + 40, arena.description, {
-                fontSize: '9px', fontFamily: 'monospace', color: '#999999',
+                fontSize: '11px', fontFamily: 'monospace', color: '#ffffff',
+                stroke: '#000000', strokeThickness: 2,
                 wordWrap: { width: 170 },
             }).setDepth(102));
 
@@ -353,7 +354,8 @@ export default class MenuScene extends Phaser.Scene {
             }).setDepth(102));
 
             this._trackOverlay(this.add.text(x + 120, y + 54, world.description, {
-                fontSize: '9px', fontFamily: 'monospace', color: unlocked ? '#999999' : '#4c5160',
+                fontSize: '11px', fontFamily: 'monospace', color: unlocked ? '#ffffff' : '#ffffff',
+                stroke: '#000000', strokeThickness: 2,
                 wordWrap: { width: 150 },
             }).setDepth(102));
 

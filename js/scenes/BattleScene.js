@@ -2755,12 +2755,12 @@ export default class BattleScene extends Phaser.Scene {
             const rightGutter = Math.max(0, vw - rect.right);
             const controlY = Math.round(window.innerHeight / 2);
 
-            const joystickX = leftGutter >= 132
-                ? Math.round(leftGutter / 2)
-                : Math.round(rect.left + 82);
-            const actionsX = rightGutter >= 156
-                ? Math.round(rect.right + rightGutter / 2)
-                : Math.round(rect.right - 88);
+            const joystickX = leftGutter >= 120
+                ? Math.round(leftGutter / 2 + 24)
+                : Math.round(Math.max(86, rect.left + 108));
+            const actionsX = rightGutter >= 150
+                ? Math.round(rect.right + rightGutter / 2 - 4)
+                : Math.round(Math.min(vw - 82, rect.right + 82));
 
             joystick.style.left = `${joystickX}px`;
             joystick.style.top = `${controlY}px`;

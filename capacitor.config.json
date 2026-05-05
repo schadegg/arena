@@ -1,0 +1,12 @@
+{
+  "appId": "com.schadegg.arena",
+  "appName": "BattleBots Arena",
+  "webDir": "www",
+  "ios": {
+    "contentInset": "never",
+    "preferredContentMode": "mobile"
+  },
+  "server": {
+    "iosScheme": "https"
+  }
+}
