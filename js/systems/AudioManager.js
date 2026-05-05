@@ -15,6 +15,7 @@ export default class AudioManager {
         this.currentMusicKey = null;
         this.activeCues = new Set();
         this.gameplaySfxEnabled = true;
+        this.pendingMusicKey = null;
         this._duckRestoreTimer = null;
         this._lastEnemyHitAt = 0;
         this._lastPlayerHitAt = 0;
@@ -41,11 +42,33 @@ export default class AudioManager {
     }
 
     resume() {
-        if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume();
+        if (this.ctx && this.ctx.state === 'suspended') {
+            const resumePromise = this.ctx.resume();
+            if (resumePromise?.catch) resumePromise.catch(() => {});
+        }
         const sound = this._soundManager();
         if (sound?.context?.state === 'suspended') {
             sound.context.resume().catch(() => {});
         }
+        if (sound?.locked && typeof sound.unlock === 'function') {
+            sound.unlock();
+        }
+        if (sound?.locked && !this._waitingForSoundUnlock) {
+            this._waitingForSoundUnlock = true;
+            sound.once('unlocked', () => {
+                this._waitingForSoundUnlock = false;
+                this.resume();
+                this._retryPendingMusic();
+            });
+        }
+        if (this.currentMusic && !this.currentMusic.isPlaying && !sound?.locked) {
+            try {
+                this.currentMusic.play();
+            } catch (e) {
+                if (this.currentMusicKey) this.pendingMusicKey = this.currentMusicKey;
+            }
+        }
+        this._retryPendingMusic();
         this._syncManagedAudio();
     }
 
@@ -148,10 +171,23 @@ export default class AudioManager {
 
     _playMusic(key) {
         const sound = this._soundManager();
-        if (!sound) return null;
+        if (!sound) {
+            this.pendingMusicKey = key;
+            return null;
+        }
+        this.pendingMusicKey = key;
         if (this.currentMusic && this.currentMusicKey === key && this.currentMusic.isPlaying) {
             this._syncManagedAudio();
             return this.currentMusic;
+        }
+        if (this.currentMusic && this.currentMusicKey === key && !this.currentMusic.isPlaying) {
+            try {
+                this.currentMusic.play();
+                this._syncManagedAudio();
+                return this.currentMusic;
+            } catch (e) {
+                // Recreate below if the existing sound object cannot restart.
+            }
         }
 
         this.stopMusic();
@@ -171,11 +207,21 @@ export default class AudioManager {
             track.play();
             this.currentMusic = track;
             this.currentMusicKey = key;
+            if (track.isPlaying) this.pendingMusicKey = null;
             return track;
         } catch (e) {
             console.warn(`Missing music track: ${key}`, e);
             return null;
         }
+    }
+
+    _retryPendingMusic() {
+        if (!this.pendingMusicKey) return;
+        const sound = this._soundManager();
+        if (sound?.locked) return;
+        const key = this.pendingMusicKey;
+        this.pendingMusicKey = null;
+        this._playMusic(key);
     }
 
     // ═══════════════════════════════════════

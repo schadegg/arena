@@ -2745,7 +2745,7 @@ export default class BattleScene extends Phaser.Scene {
             const vw = window.innerWidth;
             const leftGutter = Math.max(0, rect.left);
             const rightGutter = Math.max(0, vw - rect.right);
-            const controlY = Math.round(rect.top + rect.height * 0.72);
+            const controlY = Math.round(window.innerHeight / 2);
 
             const joystickX = leftGutter >= 132
                 ? Math.round(leftGutter / 2)
@@ -3275,6 +3275,7 @@ export default class BattleScene extends Phaser.Scene {
                 this.net.disconnect();
             }
 
+            this._destroyDomTouchControls();
             this.scene.start('ResultScene', {
                 result,
                 xpReward,
@@ -3522,6 +3523,7 @@ export default class BattleScene extends Phaser.Scene {
                 this.prog.addXP(100);
                 this.prog.addScrap(60);
                 this.net.disconnect();
+                this._destroyDomTouchControls();
                 this.scene.start('ResultScene', {
                     result: 'win',
                     xpReward: 100,
@@ -3615,6 +3617,7 @@ export default class BattleScene extends Phaser.Scene {
 
     shutdown() {
         if (this.audio) this.audio.setMusicDuck(1);
+        this._destroyDomTouchControls();
         this.particles.destroyAll();
         this.weapons.destroyAll();
         if (this.isMultiplayer && this.net) {

@@ -64,8 +64,7 @@ const installAudioUnlock = () => {
         if (!audio.currentMusic && scene?.scene?.key === 'MenuScene') {
             audio.startMenuMusic();
         } else if (audio.currentMusic && !audio.currentMusic.isPlaying) {
-            audio.currentMusic.play();
-            audio._syncManagedAudio();
+            audio.resume();
         }
         unlocked = true;
     };

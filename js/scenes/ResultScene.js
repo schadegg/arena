@@ -26,6 +26,9 @@ export default class ResultScene extends Phaser.Scene {
     }
 
     create() {
+        if (typeof document !== 'undefined') {
+            document.getElementById('battle-touch-controls')?.remove();
+        }
         this.prog = this.registry.get('progression');
         this.audio = this.registry.get('audio');
         this.cameras.main.fadeIn(300, 0, 0, 0);
