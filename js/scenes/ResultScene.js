@@ -83,7 +83,7 @@ export default class ResultScene extends Phaser.Scene {
             const world = WORLDS.find((w) => w.id === this.worldId);
             const bossLevel = world ? world.bossLevel : 6;
             if (this.bossKey) {
-                this.add.text(GAME_WIDTH / 2, 426, 'WORLD COMPLETE', {
+                this.add.text(GAME_WIDTH / 2, 506, 'WORLD COMPLETE', {
                     fontSize: '18px',
                     fontFamily: 'monospace',
                     color: '#ffde73',
@@ -91,7 +91,7 @@ export default class ResultScene extends Phaser.Scene {
                     strokeThickness: 3,
                 }).setOrigin(0.5).setDepth(6);
             } else if (this.levelId >= bossLevel - 1) {
-                this.add.text(GAME_WIDTH / 2, 426, 'BOSS NODE UNLOCKED', {
+                this.add.text(GAME_WIDTH / 2, 506, 'BOSS NODE UNLOCKED', {
                     fontSize: '17px',
                     fontFamily: 'monospace',
                     color: '#ffb75e',
