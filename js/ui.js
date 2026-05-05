@@ -580,15 +580,23 @@ export function addButton(scene, x, y, w, h, text, callback, options = {}) {
         setButtonTextureForState(scene, normal, w, h, 'normal');
         label.setScale(1);
     });
-    normal.on('pointerdown', () => {
+    let fired = false;
+    const fire = () => {
+        if (fired) return;
+        fired = true;
         const audio = scene.registry.get('audio');
         if (audio) {
             audio.init();
             audio.resume();
             audio.playMenuSelect();
         }
-        scene.time.delayedCall(1, callback);
-    });
+        scene.time.delayedCall(1, () => {
+            callback();
+            fired = false;
+        });
+    };
+    normal.on('pointerdown', fire);
+    normal.on('pointerup', fire);
 
     normal._ownedParts = [normal, label];
     return normal;

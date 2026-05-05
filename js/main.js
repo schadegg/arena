@@ -41,23 +41,10 @@ game.registry.set('progression', new ProgressionSystem());
 game.registry.set('difficulty', 'medium');
 
 const preventMobileBrowserGestures = () => {
-    const isGameSurface = (event) => event.target?.closest?.('#game-container, #battle-touch-controls');
-    const prevent = (event) => {
-        if (!isGameSurface(event)) return;
-        event.preventDefault();
-    };
+    const prevent = (event) => event.preventDefault();
     document.addEventListener('gesturestart', prevent, { passive: false });
     document.addEventListener('gesturechange', prevent, { passive: false });
     document.addEventListener('gestureend', prevent, { passive: false });
-    document.addEventListener('touchmove', prevent, { passive: false });
-
-    let lastTouchEnd = 0;
-    document.addEventListener('touchend', (event) => {
-        if (!isGameSurface(event)) return;
-        const now = Date.now();
-        if (now - lastTouchEnd <= 320) event.preventDefault();
-        lastTouchEnd = now;
-    }, { passive: false });
 };
 
 const installAudioUnlock = () => {
