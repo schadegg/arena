@@ -11,7 +11,7 @@ export default class TutorialScene extends Phaser.Scene {
         if (audio) {
             audio.init();
             audio.resume();
-            audio.startMenuMusic();
+            audio.startMenuMusic(this);
         }
         this.cameras.main.fadeIn(200, 0, 0, 0);
         addMenuBackdrop(this, { overlayAlpha: 0.58 });

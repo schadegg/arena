@@ -68,7 +68,7 @@ export default class MenuScene extends Phaser.Scene {
             audio.init();
             audio.resume();
             if (audio.currentMusicKey !== 'music_titlescreen' || !audio.currentMusic?.isPlaying) {
-                audio.startMenuMusic();
+                audio.startMenuMusic(this);
             }
         };
         if (audio) {

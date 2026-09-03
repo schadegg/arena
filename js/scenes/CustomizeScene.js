@@ -15,7 +15,7 @@ export default class CustomizeScene extends Phaser.Scene {
         if (this.audio) {
             this.audio.init();
             this.audio.resume();
-            this.audio.startMenuMusic();
+            this.audio.startMenuMusic(this);
         }
         this.cameras.main.fadeIn(200, 0, 0, 0);
 

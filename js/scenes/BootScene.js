@@ -148,15 +148,17 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('ui_victory', 'assets/ui/ui_victory.png');
         this.load.image('ui_defeat', 'assets/ui/ui_defeat.png');
 
-        // ── Music / scene stings ──
-        this.load.audio('music_titlescreen', 'assets/music/titlescreen.mp3');
+        // ── Short stings only ──
+        // Loop tracks (titlescreen + the 11 arena themes) are NOT preloaded.
+        // Phaser decodes every loaded mp3 to PCM up front, and the full set is
+        // ~2200s of audio — roughly 800 MB of Float32 buffers, which the iOS
+        // WKWebView content process cannot hold. AudioManager loads the one
+        // loop it needs on demand and evicts the previous one. These four
+        // stings total ~9s, so they stay resident.
         this.load.audio('music_boss_intro', 'assets/music/boss_intro.mp3');
         this.load.audio('music_victory', 'assets/music/victory.mp3');
         this.load.audio('music_defeat', 'assets/music/defeat.mp3');
         this.load.audio('sfx_bomb', 'assets/music/bomb.mp3');
-        ARENA_KEYS.forEach(key => {
-            this.load.audio(`music_arena_${key}`, `assets/music/arena_${key}.mp3`);
-        });
 
         // ── Hazard spritesheets (2×2 grid: idle/activating/active/destroyed) ──
         ['tnt_crate','breakable_wall','teleporter_pad','lava_pool','acid_pool','electric_floor','spike_trap','explosive_barrel'].forEach(h => {

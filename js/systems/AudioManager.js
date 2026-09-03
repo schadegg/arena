@@ -1,6 +1,25 @@
 // Hybrid audio manager:
 // - procedural Web Audio for gameplay SFX
 // - asset-backed music / title / boss intro / result stings via Phaser sound
+//
+// Loop tracks are streamed in one at a time. Phaser decodes every loaded mp3
+// into Float32 PCM, so keeping all 12 loops resident costs ~800 MB and gets the
+// iOS web content process killed. BootScene preloads only the short stings;
+// _playMusic pulls the loop it needs and _releaseTrack drops the previous one.
+
+const ARENA_KEY_PREFIX = 'music_arena_';
+
+// Loops are loaded on demand and evicted; stings stay in the boot payload.
+const isEvictableTrack = (key) => key === 'music_titlescreen' || key.startsWith(ARENA_KEY_PREFIX);
+
+const trackUrl = (key) => {
+    if (key.startsWith(ARENA_KEY_PREFIX)) {
+        return `assets/music/arena_${key.slice(ARENA_KEY_PREFIX.length)}.mp3`;
+    }
+    if (key === 'music_titlescreen') return 'assets/music/titlescreen.mp3';
+    return null;
+};
+
 export default class AudioManager {
     constructor() {
         this.ctx = null;
@@ -16,6 +35,7 @@ export default class AudioManager {
         this.activeCues = new Set();
         this.gameplaySfxEnabled = true;
         this.pendingMusicKey = null;
+        this._loadingTrackKey = null;
         this._duckRestoreTimer = null;
         this._lastEnemyHitAt = 0;
         this._lastPlayerHitAt = 0;
@@ -52,6 +72,13 @@ export default class AudioManager {
         }
         if (sound?.locked && typeof sound.unlock === 'function') {
             sound.unlock();
+        }
+        // Phaser sets `locked` from `'ontouchstart' in window`, so on iOS it starts
+        // true and is only cleared by Phaser's own document.body listener. Once the
+        // context is genuinely running, release the queued sounds ourselves —
+        // BaseSoundManager.update() picks this up and flushes lockedActionsQueue.
+        if (sound?.locked && sound.context?.state === 'running') {
+            sound.unlocked = true;
         }
         if (sound?.locked && !this._waitingForSoundUnlock) {
             this._waitingForSoundUnlock = true;
@@ -169,13 +196,65 @@ export default class AudioManager {
         }
     }
 
-    _playMusic(key) {
+    // Prefers the scene that asked for the track. Falling back to "whatever is
+    // running" is unreliable during a scene swap: the outgoing scene is still the
+    // active one while the incoming scene runs create(), and a load queued on a
+    // scene that then shuts down never completes.
+    _loaderScene(scene) {
+        if (scene?.load && scene.sys?.settings?.status !== Phaser.Scenes.SHUTDOWN) return scene;
+        const scenes = window.game?.scene?.getScenes(true);
+        return scenes?.length ? scenes[scenes.length - 1] : null;
+    }
+
+    _isTrackLoaded(key) {
+        return !!window.game?.cache?.audio?.exists(key);
+    }
+
+    // Pulls a loop track that BootScene deliberately skipped, then resumes playback.
+    _loadTrack(key, scene) {
+        if (this._loadingTrackKey === key) return;
+        const url = trackUrl(key);
+        const loader = this._loaderScene(scene);
+        if (!url || !loader) return;
+
+        this._loadingTrackKey = key;
+        loader.events.once('shutdown', () => {
+            if (this._loadingTrackKey !== key) return;
+            // The loader went down with its scene; re-issue against the next one.
+            this._loadingTrackKey = null;
+            if (this.pendingMusicKey === key) this._playMusic(key);
+        });
+        loader.load.audio(key, url);
+        loader.load.once('complete', () => {
+            this._loadingTrackKey = null;
+            if (this.pendingMusicKey !== key) return;
+            this.pendingMusicKey = null;
+            this._playMusic(key);
+        });
+        if (!loader.load.isLoading()) loader.load.start();
+    }
+
+    // Frees the decoded PCM for a loop we are no longer playing.
+    _releaseTrack(key) {
+        if (!key || !isEvictableTrack(key)) return;
+        if (this._loadingTrackKey === key) return;
+        this._soundManager()?.removeByKey?.(key);
+        window.game?.cache?.audio?.remove(key);
+    }
+
+    _playMusic(key, scene) {
         const sound = this._soundManager();
         if (!sound) {
             this.pendingMusicKey = key;
             return null;
         }
         this.pendingMusicKey = key;
+        if (!this._isTrackLoaded(key)) {
+            // Drop the outgoing loop first so we never hold two decoded tracks at once.
+            if (this.currentMusicKey && this.currentMusicKey !== key) this.stopMusic();
+            this._loadTrack(key, scene);
+            return null;
+        }
         if (this.currentMusic && this.currentMusicKey === key && this.currentMusic.isPlaying) {
             this._syncManagedAudio();
             return this.currentMusic;
@@ -218,7 +297,9 @@ export default class AudioManager {
     _retryPendingMusic() {
         if (!this.pendingMusicKey) return;
         const sound = this._soundManager();
-        if (sound?.locked) return;
+        // A locked manager still queues plays, but a track we have not fetched yet
+        // has to go through _loadTrack first, so let that case through.
+        if (sound?.locked && this._isTrackLoaded(this.pendingMusicKey)) return;
         const key = this.pendingMusicKey;
         this.pendingMusicKey = null;
         this._playMusic(key);
@@ -586,23 +667,27 @@ export default class AudioManager {
         return this._playCue('sfx_bomb', volumeScale);
     }
 
-    startArenaMusic(arenaKey) {
-        this._playMusic(`music_arena_${arenaKey || 'scrapyard'}`);
+    // `scene` is the caller's Phaser scene; it owns the loader used to stream the
+    // track in, so pass it whenever one is available.
+    startArenaMusic(arenaKey, scene) {
+        this._playMusic(`music_arena_${arenaKey || 'scrapyard'}`, scene);
     }
 
-    startMenuMusic() {
-        this._playMusic('music_titlescreen');
+    startMenuMusic(scene) {
+        this._playMusic('music_titlescreen', scene);
     }
 
-    startBattleMusic() {
-        this.startArenaMusic('scrapyard');
+    startBattleMusic(scene) {
+        this.startArenaMusic('scrapyard', scene);
     }
 
     stopMusic() {
         if (!this.currentMusic) return;
+        const stoppedKey = this.currentMusicKey;
         this.currentMusic.stop();
         this.currentMusic.destroy();
         this.currentMusic = null;
         this.currentMusicKey = null;
+        this._releaseTrack(stoppedKey);
     }
 }

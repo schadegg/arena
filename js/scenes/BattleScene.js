@@ -10,6 +10,33 @@ import WeaponSystem from '../systems/WeaponSystem.js';
 import AIController from '../systems/AIController.js';
 import { addButton, addHpBar, addIcon, addPanel, addRowPanel, addSectionPanel } from '../ui.js';
 
+// Half-extents of the DOM touch clusters, measured from the element centre that
+// layoutControls() positions, plus a few px of breathing room. The joystick is
+// 100px wide; `.touch-actions` is 146px wide with ATK at left:78/width:78 inside
+// it, so that cluster reaches 83px right of its centre.
+const JOYSTICK_EXTENT = 56;
+const ACTIONS_LEFT_EXTENT = 73;
+const ACTIONS_RIGHT_EXTENT = 91;
+
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+// env() is only readable from CSS, so bounce it through a throwaway element.
+let safeAreaProbe = null;
+const readSafeAreaInsets = () => {
+    if (typeof document === 'undefined') return { left: 0, right: 0 };
+    if (!safeAreaProbe) {
+        safeAreaProbe = document.createElement('div');
+        safeAreaProbe.style.cssText = 'position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;'
+            + 'padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)';
+        document.body.appendChild(safeAreaProbe);
+    }
+    const cs = getComputedStyle(safeAreaProbe);
+    return {
+        left: parseFloat(cs.paddingLeft) || 0,
+        right: parseFloat(cs.paddingRight) || 0,
+    };
+};
+
 const HAZARD_VISUAL_SCALE = 2;
 const FX_VISUAL_SCALE = 1;
 const FX_COUNT_MULTIPLIER = 2;
@@ -70,7 +97,7 @@ export default class BattleScene extends Phaser.Scene {
         };
         this._drawArena();
         if (this.audio) {
-            this.audio.startArenaMusic(this.arenaKey);
+            this.audio.startArenaMusic(this.arenaKey, this);
         }
 
         // ── HUD ──
@@ -347,7 +374,9 @@ export default class BattleScene extends Phaser.Scene {
         }
 
         // Attack — hold SPACE for continuous, auto-face nearest enemy
-        const attackDown = this.keys.attack.isDown || this.touchAttackPressed;
+        // Holding ATK repeats like holding SPACE; the one-shot flag covers taps
+        // short enough to land between two update ticks.
+        const attackDown = this.keys.attack.isDown || this.touchAttackPressed || this.touchAttackHeld;
         this.touchAttackPressed = false;
         if (attackDown) {
             if (p.attackDisabled) {
@@ -2569,6 +2598,7 @@ export default class BattleScene extends Phaser.Scene {
         const D = 200; // depth for touch UI
         this.touchJoystick = { active: false, dx: 0, dy: 0, baseX: 100, baseY: GAME_HEIGHT - 130 };
         this.touchAttackPressed = false;
+        this.touchAttackHeld = false;
         this.touchDodgePressed = false;
         this.touchBlockHeld = false;
         this.touchSwapPressed = false;
@@ -2673,9 +2703,16 @@ export default class BattleScene extends Phaser.Scene {
                 event.preventDefault();
                 if (onUp) onUp();
             };
-            btn.addEventListener('pointerdown', down, { passive: false });
+            btn.addEventListener('pointerdown', (event) => {
+                // Capture so the release always lands here even if the finger slides off.
+                if (btn.setPointerCapture) {
+                    try { btn.setPointerCapture(event.pointerId); } catch (e) {}
+                }
+                down(event);
+            }, { passive: false });
             btn.addEventListener('pointerup', up, { passive: false });
             btn.addEventListener('pointercancel', up, { passive: false });
+            btn.addEventListener('lostpointercapture', up, { passive: false });
             actions.appendChild(btn);
             return btn;
         };
@@ -2691,7 +2728,12 @@ export default class BattleScene extends Phaser.Scene {
         root.appendChild(pauseBtn);
 
         makeButton('DODGE', 'touch-dodge', () => { this.touchDodgePressed = true; });
-        makeButton('ATK', 'touch-attack', () => { this.touchAttackPressed = true; });
+        makeButton(
+            'ATK',
+            'touch-attack',
+            () => { this.touchAttackPressed = true; this.touchAttackHeld = true; },
+            () => { this.touchAttackHeld = false; },
+        );
         makeButton('SWAP', 'touch-swap', () => { this.touchSwapPressed = true; });
         makeButton('BLK', 'touch-block', () => { this.touchBlockHeld = true; }, () => { this.touchBlockHeld = false; });
 
@@ -2750,17 +2792,26 @@ export default class BattleScene extends Phaser.Scene {
         const layoutControls = () => {
             const canvas = this.sys.game.canvas;
             const rect = canvas.getBoundingClientRect();
-            const vw = window.innerWidth;
-            const leftGutter = Math.max(0, rect.left);
-            const rightGutter = Math.max(0, vw - rect.right);
+            const inset = readSafeAreaInsets();
             const controlY = Math.round(window.innerHeight / 2);
 
-            const joystickX = leftGutter >= 120
-                ? Math.round(leftGutter / 2 + 24)
-                : Math.round(Math.max(86, rect.left + 108));
-            const actionsX = rightGutter >= 150
-                ? Math.round(rect.right + rightGutter / 2 - 4)
-                : Math.round(Math.min(vw - 82, rect.right + 82));
+            // Landscape insets on a notched iPhone are ~62px per side. Laying the
+            // clusters out against the raw viewport edge put ATK past the safe edge
+            // and under the Dynamic Island, where taps never reached it. Both
+            // clusters are translucent, so overlapping the canvas edge is fine —
+            // spilling outside the safe area is not.
+            const safeLeft = inset.left;
+            const safeRight = window.innerWidth - inset.right;
+
+            const joystickX = Math.round(clamp(
+                safeLeft + (Math.max(0, rect.left - safeLeft)) / 2,
+                safeLeft + JOYSTICK_EXTENT,
+                Math.max(safeLeft + JOYSTICK_EXTENT, rect.left + 60),
+            ));
+            const actionsX = Math.round(Math.min(
+                safeRight - ACTIONS_RIGHT_EXTENT,
+                rect.right + ACTIONS_LEFT_EXTENT,
+            ));
 
             joystick.style.left = `${joystickX}px`;
             joystick.style.top = `${controlY}px`;
@@ -2780,6 +2831,7 @@ export default class BattleScene extends Phaser.Scene {
                 window.removeEventListener('orientationchange', layoutControls);
                 root.remove();
                 if (this.player) this.player.blocking = false;
+                this.touchAttackHeld = false;
                 this.touchBlockHeld = false;
                 resetJoystick();
             },

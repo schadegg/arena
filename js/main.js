@@ -54,7 +54,7 @@ const installAudioUnlock = () => {
         audio.resume();
         const scene = game.scene.getScenes(true)[0];
         if (!audio.currentMusic && scene?.scene?.key === 'MenuScene') {
-            audio.startMenuMusic();
+            audio.startMenuMusic(scene);
         } else if (audio.currentMusic && !audio.currentMusic.isPlaying) {
             audio.resume();
         }
